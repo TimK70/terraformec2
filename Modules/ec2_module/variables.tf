@@ -10,12 +10,17 @@ variable "instance" {
   default = "t2.micro"
 }
 
+variable "web_sg" {
+  description = "Webserver to allow HTTP and SSH access"
+}
+
+
+variable "user_data" {
+  description = "Bash script to install webserver."
+}
+
 variable "name_tag" {
   type    = string
   default = "EC2appserver"
-
 }
 
-#   sg =  module.security.HTTP_allow
-#     tag_name =      "EC2appserver"
-#  user_data =  file(".user_data.tpl")
