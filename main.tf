@@ -9,6 +9,8 @@ resource "aws_instance" "ec2module" {
   }
 }
 
-# module "security" {
-#   source = "./Modules/security"
-# }
+
+
+module "security" {
+  source = "./Modules/security"
+}
